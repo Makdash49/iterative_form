@@ -7,6 +7,7 @@ class PlantsController < ApplicationController
 	def create
 		p params[:plants]
   	# Plant.update(params[:plant].keys, params[:plant].values)
+  	#Hello?
 	end
 
  
