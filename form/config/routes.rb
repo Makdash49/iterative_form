@@ -7,9 +7,9 @@ Rails.application.routes.draw do
 
   # post '/' => 'plants#updates'
 
-  get '/edit_index' => 'plants#edit_index'
+  get '/plants/edit' => 'plants#edit_index'
 
-  post '/edit_index' => 'plants#updates'
+  post '/plants/edit' => 'plants#updates', as: 'plants_update'
 
 
 

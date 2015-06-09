@@ -8,6 +8,9 @@ class PlantsController < ApplicationController
 		@plants = Plant.all
 	end
 
+	def update
+	end
+
  
 	def updates
 		puts "The Plants:"
