@@ -4,12 +4,6 @@ class PlantsController < ApplicationController
 		@plants = Plant.all
 	end
 
-	# def create
-	# 	p params[:plants]
- #  	# Plant.update(params[:plant].keys, params[:plant].values)
- #  	#Hello?
-	# end
-
 	def edit_index
 		@plants = Plant.all
 	end
