@@ -1,13 +1,4 @@
-Update Plants!
-
-
-<%= form_tag @plant do %>
-  <% @plants.each do |plant| %> 
-    <%= fields_for "plants[#{plant.id}]", plant do |pf| %>
-      <%= pf.label plant.name %>
-      <%= pf.number_field :quantity %><br>
-
-    <% end %>
-  <% end %>
-    <%= submit_tag %>
-<% end %>
+<% @plants.each do |plant| %>
+	<%= plant.name %>
+	<%= plant.quantity %><br><br>
+<% end %> 

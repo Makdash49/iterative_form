@@ -4,10 +4,14 @@ class PlantsController < ApplicationController
 		@plants = Plant.all
 	end
 
-	def create
-		p params[:plants]
-  	# Plant.update(params[:plant].keys, params[:plant].values)
-  	#Hello?
+	# def create
+	# 	p params[:plants]
+ #  	# Plant.update(params[:plant].keys, params[:plant].values)
+ #  	#Hello?
+	# end
+
+	def edit_index
+		@plants = Plant.all
 	end
 
  
@@ -17,7 +21,7 @@ class PlantsController < ApplicationController
 			plant = Plant.find(key.to_i)
 			plant.update_attributes(quantity: value['quantity'].to_i)
 		end
-		@plants = Plant.all
+		redirect_to root_url
 	end
 
 end

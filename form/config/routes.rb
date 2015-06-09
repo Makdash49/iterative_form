@@ -5,7 +5,11 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'plants#index'
 
-  post '/' => 'plants#updates'
+  # post '/' => 'plants#updates'
+
+  get '/edit_index' => 'plants#edit_index'
+
+  post '/edit_index' => 'plants#updates'
 
 
 
