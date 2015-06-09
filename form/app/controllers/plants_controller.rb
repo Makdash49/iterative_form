@@ -11,12 +11,13 @@ class PlantsController < ApplicationController
 	end
 
  
-	def update
-		redirect_to root_path
-	end
-
-	def show
-		"hello"
+	def updates
+		puts "The Plants:"
+		params['plants'].each do |key, value|
+			plant = Plant.find(key.to_i)
+			plant.update_attributes(quantity: value['quantity'].to_i)
+		end
+		@plants = Plant.all
 	end
 
 end
